@@ -22,7 +22,7 @@ Report bugs by opening issues in this repo.
 
 The marketplace contract is a ERC-1967 proxy [deployed at this address](https://goerli.etherscan.io/address/0xa3eb4cb577d67b0fd5b538ead7376af8e41c8443) that was deployed with the Solady [ERC1967Factory](https://github.com/Vectorized/solady/blob/main/src/utils/ERC1967Factory.sol).
 
-It's unlikely (though not impossible) that you'll find a bug here, so you probably want to focus on the current implementation [which is deployed here](https://goerli.etherscan.io/address/0x97aefe11fdcb39ea7e40d9d1de523f301bfdc964#code).
+It's unlikely (though not impossible) that you'll find a bug here, so you probably want to focus on the current implementation [which is deployed here](https://goerli.etherscan.io/address/0x6a62d2b1df63673d1c3f4f22af91a703f08a114b#code).
 
 The marketplace logic is in `EthscriptionsMarketV3.sol` and this contract inherits from the `EthscriptionsEscrower.sol` base contract. I copy-pasted both of these contracts from the verified implementation on Etherscan into this repo.
 
