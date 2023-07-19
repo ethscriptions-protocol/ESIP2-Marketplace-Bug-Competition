@@ -4,13 +4,13 @@
 
 Soon we will be launching a new marketplace on Ethscriptions.com that is based on [ESIP-2](https://ethscriptions.gitbook.io/esips/esip-2-safe-smart-contract-ethscription-escrow-with-transferforpreviousowner).
 
-To help protect everyone's assets, we are holding a BUG COMPETITION while the marketplace is still on Goerli.
+To help protect everyone's assets, we are holding a **3 ETH BUG COMPETITION** while the marketplace is still on Goerli.
 
 ### The Rules
 
 The rules are simple: report a bug that could result in loss of funds or loss of ethscription and you will receive an eth reward!
 
-The exact amount you get will be up to my judgment based on the severity of the bug and the quality of the report. The total amount that can possibly be awarded across all bugs is 3 eth.
+The exact amount you get will be up to my judgment based on the severity of the bug and the quality of the report. The total amount that can possibly be awarded across all bugs is **3 eth.**
 
 If you find a bug that *wouldn't* lead to loss of funds or loss of ethscription you will not receive a cash reward, but you will receive my eternal gratitude, so you should still consider reporting it!
 
