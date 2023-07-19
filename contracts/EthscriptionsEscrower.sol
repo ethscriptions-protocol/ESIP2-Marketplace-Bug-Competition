@@ -55,7 +55,7 @@ contract EthscriptionsEscrower {
         emit PotentialEthscriptionWithdrawn(msg.sender, ethscriptionId);
     }
     
-    function _onPotentialEthscriptionDeposit(address previousOwner, bytes memory userCalldata) internal virtual {
+    function _onPotentialEthscriptionDeposit(address previousOwner, bytes calldata userCalldata) internal virtual {
         if (userCalldata.length != 32) revert InvalidEthscriptionLength();
         
         bytes32 potentialEthscriptionId = abi.decode(userCalldata, (bytes32));
