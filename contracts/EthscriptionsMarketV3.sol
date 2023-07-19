@@ -72,7 +72,7 @@ contract EthscriptionsMarketV3 is ReentrancyGuard, EIP712, EthscriptionsEscrower
         uint96 feeBps,
         address[] calldata importOwners,
         bytes32[] calldata importHashes
-    ) public {
+    ) external {
         if (msg.sender != ERC1967FactoryConstants.ADDRESS) revert NotFactory();
         if (paymentAddress == address(0)) revert ZeroPaymentAddress();
         if (adminAddress == address(0)) revert ZeroAdminAddress();
@@ -146,7 +146,7 @@ contract EthscriptionsMarketV3 is ReentrancyGuard, EIP712, EthscriptionsEscrower
         super.withdrawEthscription(ethscriptionId);
     }
     
-    function _onPotentialEthscriptionDeposit(address previousOwner, bytes memory userCalldata) internal override {
+    function _onPotentialEthscriptionDeposit(address previousOwner, bytes calldata userCalldata) internal override {
         if (!s().featureIsEnabled['deposit']) revert FeatureDisabled();
         
         super._onPotentialEthscriptionDeposit(previousOwner, userCalldata);
@@ -235,6 +235,10 @@ contract EthscriptionsMarketV3 is ReentrancyGuard, EIP712, EthscriptionsEscrower
         disableFeature("withdraw");
     }
     
+    function featureIsEnabled(string calldata feature) external view returns (bool) {
+        return s().featureIsEnabled[feature];
+    }
+    
     function computeFee(uint256 amount) public view returns (uint256) {
         return (amount * s().feeBps) / 10000;
     }
@@ -256,7 +260,7 @@ contract EthscriptionsMarketV3 is ReentrancyGuard, EIP712, EthscriptionsEscrower
     }
     
     fallback() external {
-        super._onPotentialEthscriptionDeposit(msg.sender, msg.data);
+        _onPotentialEthscriptionDeposit(msg.sender, msg.data);
     }
 
     function _domainNameAndVersion() 
