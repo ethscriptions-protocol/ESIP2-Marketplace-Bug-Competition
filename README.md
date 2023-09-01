@@ -1,4 +1,12 @@
-## Earn eth finding critical bugs in Ethscriptions Market!
+## (Contest Complete) Earn eth finding critical bugs in Ethscriptions Market!
+
+### Results
+
+This competition has concluded! Thanks to all who participated! After reviewing all the submissions and testing the marketplace for more than a month, we have decided that no one was eligible for a prize. However we do appreciate all submissions!
+
+Read below for the original rules.
+
+## Original Announcement
 
 ### What is This?
 
